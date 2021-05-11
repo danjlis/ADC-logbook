@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Testing QR code</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            function generateBarCode()
+            {
+                var nric = $('#text').val();
+                var url = 'https://api.qrserver.com/v1/create-qr-code/?data=' + nric + '&amp;size=50x50';
+                $('#barcode').attr('src', url);
+            }
+        </script>
+    </head>
+    <body>
+      <input id="Board ID" type="text"
+             value="Board ID" style="Width:20%"/>
+      <input id="Date" type="text" 
+             value="5/11/2021" style="Width:20%" /> 
+      <input id="Location" type="text"
+             value="Boulder" style="Width:20%"/>
+      <input id="Notes" type="text"
+             value="All Good" style="Width:20%"/>
+      
+      <button type="button">Click Me!</button>       
+    </body>
+</html>
